@@ -1,4 +1,4 @@
-## When Unsure - Search For Help
+# When Unsure - Search For Help
 
 ## Getting help
 
