@@ -1,0 +1,60 @@
+
+## --- Set up Dictionary of content --- ##
+
+SECTIONS = [
+    "content",
+    "intro",
+    "syntax",
+    "help",
+    "files",
+    "file-handling",
+    "wildcards",
+    "redirection-pipes-filters",
+    "loops",
+    "print",
+    "file-naming",
+    "quotes",
+    "history",
+    "keyboard",
+    "scripts",
+    "find-regex",
+    "practice",
+    "recap",
+    "acknowledgement",
+    "cheatsheet"
+    ]
+
+OUTPUT = "out/intro-terminal.pdf"
+
+# PDF ENGINE
+PANDOC_PDF_ENGINE = "--latex-engine=pdflatex"
+PANDOC_PDF_ENGINE2 = "--pdf-engine=pdflatex"
+
+## --- Build Rules --- ##
+
+rule buildSlides:
+    input:
+        styleFile = "beamerthemeLagonBleu.sty",
+        latexPreamble = "preamble.tex",
+        biblio = "refs.bib",
+        bibclass = "chicago.csl",
+        logo = "figures/logo/by-nc-sa-ccLicense.eps",
+        #figures = expand("figures/{iFigure}",      iFigure  = FIGURES),
+        metaData = "slideConfig.yaml",
+        section = expand("sections/{iSection}.md",  iSection = SECTIONS)
+    output:
+        OUTPUT
+    shell:
+        "pandoc -t beamer -H preamble.tex \
+            {input.metaData} \
+            {input.section} \
+            --filter pandoc-citeproc \
+            --slide-level 2 \
+            {PANDOC_PDF_ENGINE} \
+            --highlight-style zenburn \
+            --bibliography={input.biblio} \
+            -o {output}"
+
+rule pdfclean:
+    shell:
+        "rm {OUTPUT}"

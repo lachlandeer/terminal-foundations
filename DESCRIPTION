@@ -1,0 +1,10 @@
+Lesson: terminal
+Title: Introduction to the Bash Terminal
+Version: 2017.2.2
+Authors: person("Lachlan", "Deer", email = "lachlan.deer@gmail.com", role = c("aut", "cre")),
+         person("Adrian", "Etter", email = "adrian.etter@econ.uzh.ch", role = c("cre")),
+         person("Max", "Winkler", email = "max.winkler.ch@gmail.com", role = c("cre"))
+Maintainer: Lachlan Deer <lachlan.deer@gmail.com>
+Description: An introduction to the bash terminal for non-computer scientists.
+License: CC-BY-NC-SA
+Encoding: UTF-8

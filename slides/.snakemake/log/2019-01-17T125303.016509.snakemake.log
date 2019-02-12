@@ -1,0 +1,38 @@
+Building DAG of jobs...
+Using shell: /bin/bash
+Provided cores: 1
+Rules claiming more threads will be scaled down.
+Job counts:
+	count	jobs
+	1	buildSlides
+	1
+
+[Thu Jan 17 12:53:03 2019]
+rule buildSlides:
+    input: chicago.csl, sections/content.md, sections/intro.md, sections/syntax.md, sections/help.md, sections/files.md, sections/file-handling.md, sections/wildcards.md, sections/redirection-pipes-filters.md, sections/loops.md, sections/print.md, sections/file-naming.md, sections/quotes.md, sections/history.md, sections/keyboard.md, sections/scripts.md, sections/find-regex.md, sections/practice.md, sections/recap.md, sections/acknowledgement.md, sections/cheatsheet.md, refs.bib, figures/logo/by-nc-sa-ccLicense.eps, preamble.tex, slideConfig.yaml, beamerthemeLagonBleu.sty
+    output: out/intro-terminal.pdf
+    jobid: 0
+
+[Thu Jan 17 12:53:09 2019]
+Finished job 0.
+1 of 1 steps (100%) done
+Complete log: /home/lachlan/teaching/pp4rs/2019/instructor-material/terminal/slides/.snakemake/log/2019-01-17T125303.016509.snakemake.log
+Executing main workflow.
+Using shell: /bin/bash
+Provided cores: 1
+Rules claiming more threads will be scaled down.
+Job counts:
+	count	jobs
+	1	all
+	1
+
+[Thu Jan 17 12:53:09 2019]
+rule all:
+    input: /home/lachlan/teaching/pp4rs/2019/instructor-material/terminal/slides/../slides/out/intro-terminal.pdf
+    output: intro-terminal.pdf
+    jobid: 0
+
+[Thu Jan 17 12:53:09 2019]
+Finished job 0.
+1 of 1 steps (100%) done
+Complete log: /home/lachlan/teaching/pp4rs/2019/instructor-material/terminal/slides/.snakemake/log/2019-01-17T125303.016509.snakemake.log
