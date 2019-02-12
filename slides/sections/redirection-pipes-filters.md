@@ -50,7 +50,7 @@ The first three lines and the last two lines of `animals.txt` -->
 
 ## Example: Read all tables into one file
 
-```{bash}
+```bash
 $ cat table0* > table.txt
 ```
 
