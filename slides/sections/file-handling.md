@@ -6,6 +6,22 @@
 $ touch [filename(s)]
 ```
 
+## Aside on Naming Conventions
+
+* Files are typically named `something.extension`,
+    - This is just a convention:
+    * Two-part names help us (and programs) tell different kinds of files apart.
+* The second part of such a name is called the filename extension,
+    - Indicates what type of data the file holds
+        - `.txt` signals a plain text file
+        - `.pdf` indicates a PDF document,
+        - `.png` is a PNG image, etc.
+
+* Files contain bytes
+    - it’s up to us and our programs interpret those bytes according to the rules
+        - Filename extensions typically specify a default behaviour
+
+
 ## Create a New Directory
 
 ```bash
