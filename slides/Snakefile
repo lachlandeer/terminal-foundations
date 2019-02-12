@@ -27,8 +27,8 @@ SECTIONS = [
     "objectives",
     "intro",
     "syntax",
-    #"help",
     "files",
+    "help",
     "file-handling",
     "wildcards",
     "redirection-pipes-filters"
