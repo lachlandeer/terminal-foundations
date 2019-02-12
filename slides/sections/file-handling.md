@@ -1,90 +1,69 @@
-# Creating Stuff
+# Creating and Moving Files
 
-## The Atom editor
+## Create a New File
 
-What you should have got from the installation guide:
-
-* download Atom
-
-* the command palette: `CMD+SHIFT+P`
-
-
-## Add `atom` command to the shell (Mac and Linux)
-
-* run `atom --help`
-
-* enter the following commands to make Atom your default editor:
-
-```{bash}
-$ export EDITOR='atom -w
-$ export TEXEDIT='atom'
-$ alias atom="atom --new-window"
+```bash
+$ touch [filename(s)]
 ```
 
-* those settings will only be active for the current session. If you want to make them persistent, you can copy those terms into your `.bash_profile` in your home directory
+## Create a New Directory
 
-
-
-## Create a new file
-
-```{bash}
-$ touch [filename]
-$ touch myproject/data.txt
+```bash
+$ mkdir [directory]
 ```
 
+or
 
-## Remove a file or a directory
-
-```{bash}
-$ rm [filename | directory]
+```bash
+$ mkdir -p [directory]
 ```
 
-* there is **no undelete**  
+## Remove a file
 
-* important options  
-    * `-i` (for interactive); request confirmation before removing  
-    * `-v` (for verbose); show files which are being removed  
-    * `-r` (for recursive); required for directories; attempt to remove the file hierarchy rooted in each file argument  
-
-* Exmaples:
-```{bash}
-$ rm somefile.txt
-$ rm some-subfolder/somefile.txt
-$ rm -r some-directory/
+```bash
+$ rm [filename(s)]
 ```
 
-
-## Create or remove an empty directory
-
-```{bash}
-$ mkdir [directory] | rmdir [directory]
-```
-
-
-
-
-## Copy file, or copy files to directory
-
-```{bash}
-$ cp [source file ...] [target file | target directory]
-```
+* there is **no undelete**
 
 * important options
+    * `-i` (for interactive); request confirmation before removing
+    * `-v` (for verbose); show files which are being removed
+    * `-r` (for recursive); required for directories; attempt to remove the file hierarchy rooted in each file argument
+
+
+## Remove an Empty Directory
+
+```bash
+$ rmdir [directory]
+```
+
+## Exercise: Creating and Destroying
+
+Perform the following tasks:
+
+1. Create a new directory called `my_data`
+2. Create 100 empty files `[number].dat` inside `my_data`
+3. Create the subdirectory `new_data/2019-02` inside `my_data`
+2. Create 20 empty files `[number].dat` inside `new_data/2019-02`
+3. Remove the directory `2019-02` and all files
+
+## Copy file(s) to directory
+
+```bash
+$ cp [source file(s) ...] [target file | target directory]
+```
+
+* important options:
     * `-i` ; ask for permission before overwriting
     * `-r` ; required for directories
     * `-u` (for update); copy files that don't exist or are modified than in the existing directory
     * `-v` ; display messages
 
-* Examples:
 
-```{bash}
-$ cp somefile.txt ../some-other-directory/samename.txt
-```
+## Rename and moving files and directories
 
-
-## Rename files and directories, or move files to directory
-
-```{bash}
+```bash
 $ mv [filename ...] [target file | target directory]
 ```
 
@@ -92,8 +71,12 @@ $ mv [filename ...] [target file | target directory]
     * `-i` ; ask for permission before overwriting
     * `-v` ; display messages
 
-* Examples:
-```{bash}
-$ mv somefile.txt someothername.txt
-$ mv data.{csv,backup}
-```
+
+## Exercise
+
+You are expecting a bunch of new data files that will need to be added to `my_data`.
+Like the current contents, the are numbered numerically.
+Perform two steps:
+
+1. Create a back up of the data in a directory called `my_backup`
+2. Move the data to a subdirectory `my_data/2018`
