@@ -6,17 +6,15 @@
 *   Module Maintainer: Lachlan Deer (`@lachlandeer`)
 *   Course: [Programming Practices for Research in Economics](https://github.com/pp4rs)
 *   Institute: Dept of Economics, Uni Zurich
-*   Current Version: [Fall 2017 edition](https://pp4rs.github.io/2017-uzh)
+*   Current Version: [Winter 2019 edition](https://pp4rs.github.io/2019-foundations-uzh)
 
 ## Contents
 
 This module aims to:
 
 1. Understand the structure of your computer a bit better
-2. Celebrate the usefulness of the shell
-3. Do basic tasks on your computer using the Shell
-4. Have an idea of the power of more advanced Shell commands
-5. have heard the grammar of regular expressions
+2. Understand the usefulness of the shell
+3. Complete basic tasks on your computer using the Shell
 5. Know where to look up stuff
 
 
@@ -55,7 +53,7 @@ pip install snakemake
 The suggested citation for this repository is:
 
 ```
-Lachlan Deer, Adrian Etter, Julian Langer & Max Winkler, 2017, Introduction to the Shell, Programming Practices for Research in Economics, University of Zurich
+Lachlan Deer & Julian Langer, 2019, Learning to Use the Shell: Moving Towards Text Based Computing, Programming Practices for Research in Economics, University of Zurich
 ```
 
 <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br />
