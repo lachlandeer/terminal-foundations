@@ -38,20 +38,19 @@ $ command -option(s) (or -–longoption(s)) arguments
 
 * The dollar sign stands for a prompt waiting for input
 
-```{bash}
+```bash
 $
 ```
-* Type `whoami` and press Enter to see how the current user is named
+* Type `whoami` and press Enter to return name of current user
 
-```{bash}
+```bash
 $ whoami
 ```
 
 ## Basic Bash
 
 * When type `whoami`:
-
-1. Shell finds the program
-2. The program is run
-3. The output of the program is shown
-4. A new prompt is displayed, indicating that it's ready for new commands
+    1. Shell finds the program
+    2. The program is run
+    3. The output of the program is shown
+    4. A new prompt is displayed, indicating that it's ready for new commands
