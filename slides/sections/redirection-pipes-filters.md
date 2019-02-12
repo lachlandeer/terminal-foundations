@@ -42,13 +42,13 @@ $ head -n 3 animals.txt > animalsUpd.txt
 $ tail -n 2 animals.txt >> animalsUpd.txt
 ```
 
-What text is conatined in `animalsUpd.txt`
+What text is conatined in `animalsUpd.txt`?
 
 <!-- ## Solution
 
 The first three lines and the last two lines of `animals.txt` -->
 
-## Read files sequentially and print the output in a file
+## Example: Read all tables into one file
 
 ```{bash}
 $ cat table0* > table.txt
