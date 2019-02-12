@@ -31,18 +31,18 @@ SECTIONS = [
     "help",
     "file-handling",
     "wildcards",
-    "redirection-pipes-filters"
+    "redirection-pipes-filters",
     # "loops",
     #"print",
     # "file-naming",
     # "quotes",
     # "history",
     # "keyboard",
-    # "scripts",
-    # "find-regex",
+    "find-regex",
+    #"scripts",
     # "practice",
     # "recap",
-    # "acknowledgement",
+    "acknowledgement"
     # "cheatsheet"
     ]
 
