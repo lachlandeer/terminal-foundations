@@ -22,5 +22,5 @@ at the Department of Economics, University of Zurich in 2016.
 
 These slides are from the 2019 Foundations edition, conducted by
 
-* Lachlan Deer
-* Julian Langer
+    * Lachlan Deer
+    * Julian Langer
