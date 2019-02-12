@@ -57,28 +57,35 @@ $ cat table0* > table.txt
 
 ## Pipelines
 
-* The standard output of one command can be *piped* into the standard input of another using the pipe operator `|`
+* So far: redirecting to file
+* Can also redirect to be (the first) argument of next command
+    - called *piping*
+    - uses the `pipe operator`, `|`
 
 * The general structure is
 
-```{bash}
-$ command | command
-```
-
-* For example,
-
-```{bash}
-$ ls -l Data | less
-$ history | grep cp
+```bash
+$ command arguments | command
 ```
 
 * Pipes allow you to do complex data manipulations in one line, the pipeline
 
+## Piping Examples
+
+* Example 1:
+```bash
+$ ls -l Data | less
+```
+
+* Example 2:
+```bash
+$ history | grep cp
+```
 
 ## Filters
 
-* When working with pipelines, it is often useful to use filters
 * Filters take input, change it somehow, and then output it
+    - Change is normally by reducing content to a summary form
 * Some useful filters are the following:
     * `$ sort`
     * `$ uniq`
@@ -86,11 +93,11 @@ $ history | grep cp
     * `$ head` and `$ tail`
 
 
-## sort
+## `sort`
 
-* sort lines of text files and writes to standard output; it does not change the file
+* Sort lines of text files and writes to standard output; it does not change the file
 
-```{bash}
+```bash
 $ sort [filename]
 ```
 
@@ -100,61 +107,72 @@ $ sort [filename]
     * `-r` ; reverse the result of comparisons
 
 
-## uniq
+## `uniq`
 
-* report or filter out repeated lines in a file
+* Report or filter out repeated lines in a file
 
 ```{bash}
 $ uniq [input file] [ouput file]
 ```
 
 * often used with `sort`
-
-```{bash}
-$ ls file1 data/file2  | sort | uniq | less
-```
-
+* useful option
 	* `-d` (for duplicates); print list of duplicates
 
+## Piping with Filters - Example
 
-## wc
+Explain what the the following code does:
 
-```{bash}
-$ wc [file] ...
+```bash
+$ cat table*.dat  | sort -n | uniq | less
 ```
 
-* count number of words, lines, characters, and bytes count
+## `wc`
+
+* Count number of words, lines, characters, and bytes count
+
+```{bash}
+$ wc [file]
+```
+
+* can restrict count to certain fields using
     * `-w`: words
     * `-l`: lines
     * `-m`: characters
 
-* example:
+## Pipes and Filters Example 2:
 
-```{bash}
-ls file1 data/file2 | sort | uniq | wc -l > lines.txt
+Explain what the the following code does:
+
+```bash
+$ cat table*.dat  | sort -n | uniq | wc -l > lines.txt
 ```
 
-
-## head and tail
-
-* print first / last part of files; by default 10 lines
-
-```{bash}
-$ head [file ...]
-```
-and
-```{bash}
-$ tail [file ...]
+## Exercise: Which pipe?
+The file `animals.txt` contains 586 lines of data formatted as follows:
+```bash
+2012-11-05,deer
+2012-11-05,rabbit
+2012-11-05,raccoon
+2012-11-06,rabbit
+...
 ```
 
-* `-n [count]`; determines the number of lines you want to print
-* `-f [follow]`; display the file and update if the files get updated
+##
 
+Assuming your current directory is `data-shell/data/`, what command would you use to produce a table that shows the total count of each type of animal in the file?
 
-## In action...
+1. `grep {deer, rabbit, raccoon, deer, fox, bear} animals.txt | wc -l`
+2. `sort animals.txt | uniq -c`
+3. `sort -t, -k2,2 animals.txt | uniq -c`
+4. `cut -d, -f 2 animals.txt | uniq -c`
+5. `cut -d, -f 2 animals.txt | sort | uniq -c`
+6. `cut -d, -f 2 animals.txt | sort | uniq -c | wc -l`
 
-* Make a subdirectory, navigate to it, copy the data .txt files from Nelle's Data into it.
+<!-- ## Solution
 
-* Create a file that contains the line counts of planets.txt
+Option 5. is the correct answer.
 
-* how many unique salmons are in the salmon.txt file
+\vspace{0.35cm}
+
+If you have difficulty understanding why, try running the commands, or sub-sections of the pipelines (make sure you are in the `data-shell/data` directory). -->
