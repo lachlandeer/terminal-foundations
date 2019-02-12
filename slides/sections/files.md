@@ -6,75 +6,44 @@
 
 * We differentiate between files which hold information and  directories (or folders) which hold files
 
-* A handful of commands are used frequently to interact with these structures. 
+* A handful of commands are used frequently to interact with these structures.
 
-
-## Basic Bash
-
-* The dollar sign stands for a prompt waiting for input
-
-```{bash}
-$
-```
-* Type `whoami` and press Enter to see how the current user is named
-
-```{bash}
-$ whoami
-```
-
-## Basic Bash
-
-* When type `whoami` the shell finds the program
-
-* The program is run
-
-* The output of the program is shown
-
-* A new prompt is displayed, indicating that it's ready for new commands
-
-
-## Basic Bash
-
-* To know where in the filesytem you are type `pwd` (print working directory)
-
-```{bash}
-$ pwd
-```
 
 ## Directory structure
 
 * To understand what our home directory is, let's look at the directory structure
 
-* It is organized as a tree with the root directory / at the very top
+* Organized as a tree with the root directory / at the very top
 
 * Everything else is contained in it
 
-* / refers to the leading slash in /Users/me (Mac and Linux) or /cygdrive (Windows with cygwin)
+* / refers to the leading slash
+    - in /Users/me (Mac and Linux)
+    - /cygdrive (Windows with cygwin)
 
 
 ## Directory structure
 
 Mac and Linux:
 
-* Underneath /Users the data of the other user accounts on the machine is stored
-
-* E.g. /Users/someusername
-
-* If we see /Users/me, we are inside /Users because of the first part of its name. Similarly, /Users resides in the root /
+* Underneath `/Users` the data of user accounts on the machine is stored
+    - E.g. `/Users/someusername`
+* If we see `/Users/me`, we are inside `/Users`.
+    - Similarly, `/Users` resides in the root `/`
 
 Windows:
 
-* Underneath /cygdrive you find the drives of your system (i.e, C, D, etc.)
+* Underneath `/cygdrive` you find the drives of your system (i.e, C, D, etc.)
 
 
-## What files are in the directory?
+## Listing Files in a Directory with `ls`
 
 * list directory contents
 
-```{bash}
+```bash
 $ ls [directory ...]
 ```
-* important options:
+* some important options:
     * `-F` (for flag); distinguish directories ('/'), executables ('*'), symbolic links, etc.
     * `-a` (for all); include directory entries whose names begin with a dot (i.e., .git)
     * `-l` (for long); prints the output in the long format
@@ -86,25 +55,59 @@ $ ls [directory ...]
 
 * to change your working directory
 
-```{bash}
+```bash
 $ cd [directory]
 ```
 
 * some shortcuts:
     * change to the current directory: `$ cd .`
     * change to the parent directory: `$ cd ..`
-    * change to the home directory: `$ cd ~` | `cd  `
+    * change to the home directory: `$ cd ~` or `cd  `
     * change to previous directory: `$ cd -`
-    * tab completion (press TAB once, twice, ALT+*)
+    * tab completion (press TAB once, twice)
 
-## How can I view the content of a file?
+## A Little More on Those Shortcuts
+
+These should work in combination with any command
+
+* `.` : the current directory
+* `..` : the parent directory
+    - the one containing this one
+* `~` : your home directory
+* `-` : the previous directory
+
+## Navigation & Whitespace
+
+![](./figures/expanding-brain.jpg){ height="250px" }
+
+
+## Exercise: relative path resolution
+Using the filesystem diagram below, if `pwd` displays `/Users/thing`, what is the output of `ls -F ../backup`?
+
+1. `../backup: No such file or directory`
+2. `2012-12-01 2013-01-08 2013-01-27`
+3. `2012-12-01/ 2013-01-08/ 2013-01-27/`
+4. `original/ pnas_final/ pnas_sub/`
+
+
+##
+
+![Example Filesystem](figures/filesystem-challenge.pdf)
+
+<!-- ## Solution
+
+1. No: there is a directory backup in /Users.
+2. No: this is the content of Users/thing/backup, but with .. we asked for one level further up.
+3. No: see previous explanation.
+4. \alert{Yes}: ../backup/ refers to /Users/backup/. -->
+
+## Viewing Content of a File
 
 * View the file in the shell
 
-```{bash}
+```bash
 $ less [filename]
 ```
-**NOTE**: `man` uses `less` to show the manual page
 
 * to navigate in less:
 	* `space`: jump a page
@@ -120,13 +123,3 @@ $ tail [filename]
 $ head [filename]
 $ more [filename] # less is more more
 ```
-
-## In action...
-
-* Navigate to your home directory
-
-* list the files in your home directory
-
-* go to Nelle's Data, read some of her .txt files
-
-* read the haiku.txt file in Nelle's writing folder
