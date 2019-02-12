@@ -24,7 +24,7 @@ PDF_ENGINE = get_pdf_engine()
 ## --- Set up Dictionary of content --- ##
 
 SECTIONS = [
-    "content",
+    "objectives",
     "intro",
     "syntax",
     "help",

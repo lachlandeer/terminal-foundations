@@ -1,16 +1,11 @@
-# What is it?
-
-* What is the shell?
-* Why should you learn it?
-* General stuff
+# What is the Shell?
 
 ##
 
-![The Matrix](./figures/matrix.jpeg){ width=250px }
+> **\alert{A program that accepts text based instructions to produce one or more outputs}**
 
-![Mr Robot](./figures/mr-robot.png){ width=250px }
 
-## Background
+## What Computers do
 
 At a high level, computers do four things:
 
@@ -19,13 +14,15 @@ At a high level, computers do four things:
 - communicate with each other
 - interact with us
 
-## Shell:
+
+
+## The Shell Runs Programs
 
 The shell is a **comand line interface (CLI)**
 
 * offers a way to interact with the computer via text
 * is a program like any other but it's main job is to run other programs
-* The most popular Unix shell is bash (Bourne Again SHell).
+
 *
 It works in a **read-evaluate-print loop (REPL)**.
 
@@ -35,39 +32,32 @@ It works in a **read-evaluate-print loop (REPL)**.
     3. The shell **prints** the output of the command
 
 
-## Why should you learn it?
-
-Many programs and tools do not have a graphical interface. You run them via a shell command, e.g.
-
-* apt-get / homebrew to quickly install software
-* snakemake to automatically run a whole research project
-
-Reproducing the first stages of a project (moving files / data by hand) is very hard
-
-* The shell allows us to document the exact order in which every step was taken
-* This is especially useful for public / messy data to make your work reproducible
+## Some Definitions
 
 
-## Why should you learn it? \#2
+Don't be thrown off by terminology:
 
-The command line is often the easiest way to interact with
-	remote machines
+- The "shell", "terminal", "tty", "command prompt", etc.
+- These are essentially different names for the same thing.
+- They are all referring to a *command line interface* (CLI).
 
-* Allows you to execute projects in the cloud
+There are many shell variants, but we're going to focus on [**Bash**](https://www.gnu.org/software/bash/)
 
-The shell is very powerful
+- i.e. **B**ourne **a**gain **sh**ell.
+- Default shell on Linux and MacOS.
+- Windows users should have Cygwin which emulates the behaviour of a Bash shell
 
-* allows you to combine existing tools with only a few keystrokes
-* to set up pipelines
-* to handle large volumes of data automatically
 
-## For Windows users
+##  Why bother with the shell?
 
-Shells of most Unix derivatives (Linux, OS X) are fairly similar and the basic tools are available
+* Power
+    - Both for executing commands and for fixing problems. There are some things you just can't do in an IDE or GUI.
+* Reproducibility
+    - Scripting is reproducible, while clicking is not.
 
-* Linux users just press `Crtl + Alt + T`
-* Mac Users press `Cmd + Space` and start typing `terminal`
+##  Why bother with the shell?
 
-The Windows shell differs considerably from this
-
-* Download cygwin to use the functionality and the commands of the Linux shell (see the installation guide)
+* Interacting with servers and super computers
+    - The shell is often the only game in town for high performance computing. We'll get to this later in the course.
+* Automating workflow and analysis pipelines
+    - Easily track and reproduce an entire project (e.g. use a Makefile to combine multiple programs, scripts, etc.)
