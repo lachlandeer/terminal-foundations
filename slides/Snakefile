@@ -27,7 +27,7 @@ SECTIONS = [
     "objectives",
     "intro",
     "syntax",
-    "help",
+    #"help",
     "files",
     "file-handling",
     "wildcards",

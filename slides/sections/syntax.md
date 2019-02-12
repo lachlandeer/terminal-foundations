@@ -1,36 +1,35 @@
-## Command structure and types
+# Getting Started
 
-* **`$ command -options (or -–longoption) arguments`**
-* `$ which [executable]`; determines the exact location of an executable
+## Opening the Shell
 
-**Note**:
+Open up your Bash shell.
+
+
+* [Linux](https://www.wikihow.com/Open-a-Terminal-Window-in-Ubuntu)
+* [Mac](https://www.techwalla.com/articles/how-to-open-terminal-on-a-macbook)
+* Windows
+
+## First Look
+
+You should see something like:
+```bash
+ username@hostname:~$
+```
+
+This is shell-speak for: "Who am I and where am I?"
+
+- `username` denotes a specific user (one of potentially many on this computer).
+- `@hostname` denotes the name of the computer or server.
+- `:~` denotes the directory path (where `~` signifies the user's home directory).
+- `$` denotes the start of the command prompt.
+
+## Syntax
+
+```bash
+$ command -option(s) (or -–longoption(s)) arguments
+```
 
 * a `whitespace` on the command line is an argument separator,
 * a `-` starts options,
 * a `--` starts longoptions.
-* but it's in the programers freedom to violate this standard
-
-## Starting and Exiting a program
-
-Starting
-
-* You can start programs in an interactive mode
-* e.g. by typing `python`, you just started a python session
-* Now you type python code, not shell code
-
-Exiting
-
-* It is therefore imporant to know how to exit a program.
-* A program should tell you how, if not normally the following work:
-    * The `exit command` for the program, e.g. `quit()` in python or R
-    * Press `CTRL+C`
-    * Press `CTRL+X`
-    * Type `quit` or `q`
-
-## ... Except for VIM
-
-[VIM](https://stackoverflow.blog/2017/05/23/stack-overflow-helping-one-million-developers-exit-vim/):
-
-* Press `ESC`, then type `:q!` (without saving) or `:x` (with saving)
-
-# Hands on
+* ... but it's in the programers freedom to violate this standard
