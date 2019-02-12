@@ -2,11 +2,11 @@
 
 ## Before we get started...
 
-* the part of the Operating System that handles files and directories is called the filesystem
+* The part of the Operating System that handles files and directories is called the filesystem
 
 * We differentiate between files which hold information and  directories (or folders) which hold files
 
-* A handful of commands are used frequently to interact with these structures. You will know them by the end of the lecture
+* A handful of commands are used frequently to interact with these structures. 
 
 
 ## Basic Bash
@@ -75,9 +75,9 @@ Windows:
 $ ls [directory ...]
 ```
 * important options:
-    * `-F` (for flag); distinguish directories ('/'), executables ('*'), symbolic links, etc.  
+    * `-F` (for flag); distinguish directories ('/'), executables ('*'), symbolic links, etc.
     * `-a` (for all); include directory entries whose names begin with a dot (i.e., .git)
-    * `-l` (for long); prints the output in the long format  
+    * `-l` (for long); prints the output in the long format
     * `-h` (for human readable): prints filesize in KB, MB, GB, TB instead of #Bytes
     * `-d` (for directories): show directories only
 
@@ -91,10 +91,10 @@ $ cd [directory]
 ```
 
 * some shortcuts:
-    * change to the current directory: `$ cd .`   
-    * change to the parent directory: `$ cd ..`   
-    * change to the home directory: `$ cd ~` | `cd  `  
-    * change to previous directory: `$ cd -`   
+    * change to the current directory: `$ cd .`
+    * change to the parent directory: `$ cd ..`
+    * change to the home directory: `$ cd ~` | `cd  `
+    * change to previous directory: `$ cd -`
     * tab completion (press TAB once, twice, ALT+*)
 
 ## How can I view the content of a file?
