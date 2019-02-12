@@ -33,7 +33,7 @@ SECTIONS = [
     "wildcards",
     "redirection-pipes-filters"
     # "loops",
-    # "print",
+    #"print",
     # "file-naming",
     # "quotes",
     # "history",
