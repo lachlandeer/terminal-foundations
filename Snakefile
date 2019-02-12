@@ -8,12 +8,16 @@ subworkflow slides:
    workdir:   "slides/"
    snakefile: "slides/Snakefile"
 
+# --- Variable Declarations --- #
+OUTPUT = "out/terminal.pdf"
+
+
 # --- Build Rules --- #
 
 rule all:
     input:
-        pdfs = slides("../slides/out/intro-terminal.pdf")
+        pdfs = slides("../slides/" + OUTPUT)
     output:
-        slides = "intro-terminal.pdf"
+        slides = "terminal.pdf"
     shell:
         "mv slides/out/*.pdf ."

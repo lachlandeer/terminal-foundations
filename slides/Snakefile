@@ -1,3 +1,25 @@
+# subworkflow: slides
+#
+# contributor: @lachlandeer
+#
+#
+
+# --- Libraries --- #
+import os, re
+
+# --- Pandoc version --- #
+
+def get_pdf_engine():
+    pandoc_version = os.popen("pandoc --version").read().splitlines()[0]
+    version_number = int(re.search('\d', pandoc_version).group(0))
+    print('Working with pandoc version:', version_number)
+    if version_number < 2:
+        pdf_engine  = "--latex-engine=pdflatex"
+    else:
+        pdf_engine = "--pdf-engine=pdflatex"
+    return pdf_engine
+
+PDF_ENGINE = get_pdf_engine()
 
 ## --- Set up Dictionary of content --- ##
 
@@ -9,26 +31,20 @@ SECTIONS = [
     "files",
     "file-handling",
     "wildcards",
-    "redirection-pipes-filters",
-    "loops",
-    "print",
-    "file-naming",
-    "quotes",
-    "history",
-    "keyboard",
-    "scripts",
-    "find-regex",
-    "practice",
-    "recap",
-    "acknowledgement",
-    "cheatsheet"
+    "redirection-pipes-filters"
+    # "loops",
+    # "print",
+    # "file-naming",
+    # "quotes",
+    # "history",
+    # "keyboard",
+    # "scripts",
+    # "find-regex",
+    # "practice",
+    # "recap",
+    # "acknowledgement",
+    # "cheatsheet"
     ]
-
-OUTPUT = "out/intro-terminal.pdf"
-
-# PDF ENGINE
-PANDOC_PDF_ENGINE = "--latex-engine=pdflatex"
-PANDOC_PDF_ENGINE2 = "--pdf-engine=pdflatex"
 
 ## --- Build Rules --- ##
 
@@ -50,7 +66,7 @@ rule buildSlides:
             {input.section} \
             --filter pandoc-citeproc \
             --slide-level 2 \
-            {PANDOC_PDF_ENGINE} \
+            {PDF_ENGINE} \
             --highlight-style zenburn \
             --bibliography={input.biblio} \
             -o {output}"
