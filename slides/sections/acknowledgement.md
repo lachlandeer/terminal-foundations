@@ -3,6 +3,8 @@
 * This course is designed after and borrows a lot from:
     * Effective Programming Practices for Economists, a course by Hans-Martin von Gaudecker
     * Software Carpentry's Unix Shell Lesson
+    * [`Data Science for Economists`](https://github.com/uo-ec607), a course by [Grant McDermott](http://grantmcdermott.com/)
+
 
 * The course material from above sources is made available under a Creative Commons Attribution License, as is this courses material.
 
