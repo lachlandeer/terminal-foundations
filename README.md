@@ -47,6 +47,7 @@ pip install snakemake
 *   This module is designed after and borrows a lot from:
     *   [`Effective Programming Practices for Economists`](http://wiwi.uni-bonn.de/gaudecker/teaching/prog_econ_slides.html#prog-econ-slides), a course by [Hans-Martin von Gaudecker](http://wiwi.uni-bonn.de/gaudecker/index.html)
     *   Software Carpentry's [`Unix Shell` lesson](http://swcarpentry.github.io/shell-novice/)
+    * [`Data Science for Economists`](https://github.com/uo-ec607), a course by [Grant McDermott](http://grantmcdermott.com/)
 
 ## Suggested Citation
 
